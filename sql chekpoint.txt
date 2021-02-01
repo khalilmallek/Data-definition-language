@@ -1,0 +1,34 @@
+CREATE TABLE customer
+(
+    customer_id number PRIMARY KEY not null,
+    customer_name varchar(40),
+    customer_tel number,
+)
+
+
+
+CREATE TABLE product
+(
+    product_id numder PRIMARY KEY not null,
+    product_name varchar(40),
+    price varchar(20),
+)
+
+
+
+CREATE TABLE orders
+(
+    customer_id number PRIMARY KEY foreign key not null,
+    product_id numder PRIMARY KEY foreign key not null,
+    quantity number,
+    total_amount number
+)
+
+ALTER TABLE product
+ADD Category VARCHAR2(20);
+
+
+
+
+ALTER TABLE orders
+ADD OrderDate data ;
